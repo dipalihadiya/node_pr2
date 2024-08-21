@@ -9,7 +9,7 @@
     <h1 style="text-align: center;">List of Volunteers</h1>
 
     </div><br><br>
-    <table border="1" align="center" width="1000">
+    <table border="2" align="center"  width="1000">
         <thead>
             <tr>
                 <th>id</th>
@@ -30,14 +30,16 @@
                 <td><%= t.phone %></td>
                 <td><%= t.skills %></td>
                 <th>
-                    <a href="/editform/<%= t.id %>" class="btn btn-primary">Edit</a> ||
-                    <a href="/deleteform/<%= t.id %>" class="btn btn-danger">Delete</a>
+                    <a href="/editform/<%= t.id %>"  style="background-color: blue; color: white; margin: 20px; padding: 2px; padding-left: 5px; padding-right: 5px; border-radius: 5px; text-decoration: none; ">Edit</a> ||
+                    <a href="/deleteform/<%= t.id %>"  style="background-color: red; color: white;  border-radius: 5px;padding: 2px; padding-left: 5px; padding-right: 5px; text-decoration: none; ">Delete</a>
                 </th>
             </tr>
             <% }); %>
         </tbody>
         
-    </table>
-    <a href="/index">Back to home</a>
+    </table><br><br><br>
+   <div style="text-align: center;">
+    <a href="/index" style="background-color: blue; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; ">Back to home</a>
+   </div>
 </body>
 </html>
