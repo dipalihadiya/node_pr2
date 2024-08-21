@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">List of Volunteers</h1>
+
+    </div><br><br>
+    <table border="1" align="center" width="1000">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone number</th>
+                <th>Skills</th>
+                <th>Action</th>
+            </tr>
+           
+        </thead>
+        <tbody>
+            <% formCreate.forEach((t) => { %>
+            <tr>
+                <td><%= t.id %></td>
+                <td><%= t.fname %></td>
+                <td><%= t.email %></td>
+                <td><%= t.phone %></td>
+                <td><%= t.skills %></td>
+                <th>
+                    <a href="/editform/<%= t.id %>" class="btn btn-primary">Edit</a> ||
+                    <a href="/deleteform/<%= t.id %>" class="btn btn-danger">Delete</a>
+                </th>
+            </tr>
+            <% }); %>
+        </tbody>
+        
+    </table>
+    <a href="/index">Back to home</a>
+</body>
+</html>
