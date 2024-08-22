@@ -62,6 +62,6 @@ const deleteFormController = (req, res) => {
     const deleteTodo = formCreate.filter((todo) =>
          todo.id != req.params.id); 
     formCreate = deleteTodo;
-    res.redirect('/');
+    res.redirect('/read');
 }
 module.exports = {defaultController, addFormController ,editFormController , updateFormController,deleteFormController,readFormController}
